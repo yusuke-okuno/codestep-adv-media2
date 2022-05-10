@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #121212;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+// a {
+//   color: #121212;
+//   text-decoration: none;
+// }
+// img {
+//   max-width: 100%;
+// }
+// li {
+//   list-style: none;
+// }
+.site-title {
+  line-height: 1px;
+}
+.site-title a {
+  display: block;
+}
+.sec-title {
+  font-size: 2.25rem;
+  margin-bottom: 30px;
+  text-align: center;
+} 
+
+/*
+フェード表示させる要素に使用するためのクラス
+*/
+/* .fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+} */
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+/*
+「position: fixed;」でヘッダーを固定し、「z-index: 10;」で前面に表示
+※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに
+設定している場合は、z-indexの数値が大きい方が前面に表示される
+*/
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
+}
+
+/*
+ハンバーガーメニュー
+解説は、「中級編：ストアサイト（インテリア）」のCSS参照
+*/
+#navi {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  color: #fff;
+  padding: 60px 25px;
+  background-color: #121212;
+  overflow-x: hidden;
+  overflow-y: auto;
+  // -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 20;
+  opacity: 0;
+  a {
+    color: #fff;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  ul.nav-menu {
+    margin-bottom: 60px;
+    border-top: solid 1px #fff;
+  }
+  ul.nav-menu li {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: solid 1px #fff;
+  }
+  ul.nav-sns li {
+    padding: 5px 0;
+  }
+}
+
+.open #navi {
+  left: 0;
+  opacity: 1;
+}
+
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 20;
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all .5s;
+  }
+  span:nth-child(1) {
+    top: 4px;
+  }
+  span:nth-child(2) {
+    top: 14px;
+  }
+  span:nth-child(3) {
+    bottom: 4px;
+  }
+}
+
+.open .toggle_btn {
+  span {
+    background-color: #fff;
+  }
+  span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+  }
+}
+
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#main {
+  padding-top: 80px;
+}
+
+#bg-video {
+  width: 100%;
+}
+
+#pickup {
+  width: 100%;
+  padding: 100px 0 50px 0;
+  .slick-area {
+    font-size: 0;
+  }
+  .slick-area li {
+    padding: 0 30px;
+  }
+}
+
+// 以下は一瞬縦並びになるのを解消するコード
+// →のはずが、全部消えてしまう
+// .slick-area {
+//   visibility: hidden;
+//   .slick-initialized {
+//     visibility: visible;
+//   }
+// }
+
+#feature {
+  max-width: 1240px;
+  padding: 100px 16px 50px 16px;
+  margin: -50px auto 10px auto;
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // grid-template-rows: repeat(3);
+    // justify-content: space-between;
+    gap: 26px;
+  }
+}
