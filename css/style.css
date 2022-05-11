@@ -9,6 +9,10 @@ body {
   line-height: 1.7;
 }
 
+img {
+  max-width: 100%;
+}
+
 .site-title {
   line-height: 1px;
 }
@@ -53,10 +57,6 @@ body {
   background-color: #fff;
 }
 
-/*
-ハンバーガーメニュー
-解説は、「中級編：ストアサイト（インテリア）」のCSS参照
-*/
 #navi {
   display: block;
   position: fixed;
@@ -194,6 +194,7 @@ body {
 
 #pickup .slick-area {
   font-size: 0;
+  width: 100%;
 }
 
 #pickup .slick-area li {

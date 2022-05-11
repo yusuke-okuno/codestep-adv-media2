@@ -13,9 +13,9 @@ body {
 //   color: #121212;
 //   text-decoration: none;
 // }
-// img {
-//   max-width: 100%;
-// }
+img {
+  max-width: 100%;
+}
 // li {
 //   list-style: none;
 // }
@@ -58,10 +58,7 @@ body {
   background-color: #fff;
 }
 
-/*
-ハンバーガーメニュー
-解説は、「中級編：ストアサイト（インテリア）」のCSS参照
-*/
+
 #navi {
   display: block;
   position: fixed;
@@ -183,9 +180,13 @@ body {
   padding: 100px 0 50px 0;
   .slick-area {
     font-size: 0;
+    width: 100%;
   }
   .slick-area li {
     padding: 0 30px;
+    // img {
+    //   object-fit: cover;
+    // }
   }
 }
 
