@@ -2,6 +2,7 @@
 
 html {
   font-size: 100%;
+  // scroll-behavior: smooth;
 }
 body {
   color: #121212;
@@ -206,8 +207,66 @@ img {
   .grid{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    // grid-template-rows: repeat(3);
-    // justify-content: space-between;
     gap: 26px;
+    .item {
+      transition: all  0.3s ease;
+      box-shadow: 0 0 8px 4px #ccc;
+    }
+    img {
+      vertical-align: top;
+    }
+    .item-content {
+      padding: 30px;
+    }
+    .item-cat {
+      font-size: 0.75rem;
+      margin-bottom: 20px;
+    }
+    .item-text {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .item-date {
+      font-size: 0.75rem;
+      text-align: right;
+    }
+  }
+}
+
+#contact {
+  color: #fff;
+  background-color: #121212;
+  padding: 50px 0;
+  .sec-title {
+    color: #fff;
+  }
+  .content {
+    max-width: 1240px;
+    padding: 0 16px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact-info p {
+    margin-bottom: 30px;
+  }
+  .contact-info,.contact-form {
+    width: 45%;
+    input,textarea {
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .button input {
+      width: 200px;
+      color: #fff;
+      background-color: #121212;
+      border: solid 1px #fff;
+      padding: 12px 0;
+      margin-bottom: 0;
+      text-align: center;
+      // 一個上の「SEND」を真ん中にする記述なかった
+    }
   }
 }
