@@ -45,9 +45,9 @@ img {
 ヘッダー
 -------------------------------------------*/
 /*
-「position: fixed;」でヘッダーを固定し、「z-index: 10;」で前面に表示
-※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに
-設定している場合は、z-indexの数値が大きい方が前面に表示される
+「position: fixed;」でヘッダーを固定し、
+「z-index: 10;」で前面に表示
+※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに設定している場合は、z-indexの数値が大きい方が前面に表示される
 */
 .header {
   width: 100%;
@@ -59,7 +59,9 @@ img {
   background-color: #fff;
 }
 
-
+/*
+ハンバーガーメニュー
+*/
 #navi {
   display: block;
   position: fixed;
@@ -168,13 +170,23 @@ img {
   cursor: pointer;
 }
 
+/*-------------------------------------------
+Main
+-------------------------------------------*/
 #main {
   padding-top: 80px;
 }
 
+/*-------------------------------------------
+Video
+-------------------------------------------*/
 #bg-video {
   width: 100%;
 }
+
+/*-------------------------------------------
+Pickup
+-------------------------------------------*/
 
 #pickup {
   width: 100%;
@@ -200,6 +212,9 @@ img {
 //   }
 // }
 
+/*-------------------------------------------
+Feature
+-------------------------------------------*/
 #feature {
   max-width: 1240px;
   padding: 100px 16px 50px 16px;
@@ -233,13 +248,17 @@ img {
   }
 }
 
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
+
 #contact {
   color: #fff;
   background-color: #121212;
   padding: 50px 0;
-  .sec-title {
-    color: #fff;
-  }
+  // .sec-title {
+  //   color: #fff;
+  // }
   .content {
     max-width: 1240px;
     padding: 0 16px;
@@ -268,5 +287,20 @@ img {
       text-align: center;
       // 一個上の「SEND」を真ん中にする記述なかった
     }
+    .button input:hover {
+      color: #202020;
+      background-color: #fff;
+    }
   }
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+.footer {
+  color: #fff;
+  background-color: #121212;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.75rem;
 }

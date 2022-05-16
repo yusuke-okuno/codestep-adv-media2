@@ -39,9 +39,9 @@ img {
 ヘッダー
 -------------------------------------------*/
 /*
-「position: fixed;」でヘッダーを固定し、「z-index: 10;」で前面に表示
-※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに
-設定している場合は、z-indexの数値が大きい方が前面に表示される
+「position: fixed;」でヘッダーを固定し、
+「z-index: 10;」で前面に表示
+※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに設定している場合は、z-indexの数値が大きい方が前面に表示される
 */
 .header {
   width: 100%;
@@ -57,6 +57,9 @@ img {
   background-color: #fff;
 }
 
+/*
+ハンバーガーメニュー
+*/
 #navi {
   display: block;
   position: fixed;
@@ -179,14 +182,23 @@ img {
   cursor: pointer;
 }
 
+/*-------------------------------------------
+Main
+-------------------------------------------*/
 #main {
   padding-top: 80px;
 }
 
+/*-------------------------------------------
+Video
+-------------------------------------------*/
 #bg-video {
   width: 100%;
 }
 
+/*-------------------------------------------
+Pickup
+-------------------------------------------*/
 #pickup {
   width: 100%;
   padding: 100px 0 50px 0;
@@ -201,6 +213,9 @@ img {
   padding: 0 30px;
 }
 
+/*-------------------------------------------
+Feature
+-------------------------------------------*/
 #feature {
   max-width: 1240px;
   padding: 100px 16px 50px 16px;
@@ -245,14 +260,13 @@ img {
   text-align: right;
 }
 
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
 #contact {
   color: #fff;
   background-color: #121212;
   padding: 50px 0;
-}
-
-#contact .sec-title {
-  color: #fff;
 }
 
 #contact .content {
@@ -290,5 +304,21 @@ img {
   padding: 12px 0;
   margin-bottom: 0;
   text-align: center;
+}
+
+#contact .contact-info .button input:hover, #contact .contact-form .button input:hover {
+  color: #202020;
+  background-color: #fff;
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+.footer {
+  color: #fff;
+  background-color: #121212;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.75rem;
 }
 /*# sourceMappingURL=style.css.map */
