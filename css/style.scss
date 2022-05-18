@@ -197,9 +197,10 @@ Pickup
   }
   .slick-area li {
     padding: 0 30px;
-    // img {
-    //   object-fit: cover;
-    // }
+    img {
+      // height: 160px;
+      object-fit: cover;
+    }
   }
 }
 

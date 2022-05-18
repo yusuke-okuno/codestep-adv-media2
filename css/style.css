@@ -213,6 +213,11 @@ Pickup
   padding: 0 30px;
 }
 
+#pickup .slick-area li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*-------------------------------------------
 Feature
 -------------------------------------------*/
