@@ -22,7 +22,7 @@
     
     // 【各セクションへ飛ぶリンクを押した時に背景（マスク）消える】
 
-    const menu = document.querySelectorAll("#navi a")
+    const menu = document.querySelectorAll("#navi a");
     menu.forEach(function(element){
       // console.log(element);
       element.addEventListener('click', (e) => {
@@ -58,7 +58,23 @@
 
     }
 
+    // featureセクションのitem画像がフェードインしてくる
+    const fadeInTarget = document.querySelectorAll('.fadein');
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < fadeInTarget.length; i++){
+
+        const rect = fadeInTarget[i].getBoundingClientRect().top;
+        const scroll = window.pageYOffset || document.documentElement.scrollTop;
+        const offset = rect + scroll;
+        const windowHeight = window.innerHeight; 
+
+        if (scroll > offset - windowHeight + 200) {
+          fadeInTarget[i].classList.add('scroll-in');
+        }
+
+      }
+    });
+
   });
 }
 
-// かすやさん最高！！！
